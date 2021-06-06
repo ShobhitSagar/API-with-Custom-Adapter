@@ -34,9 +34,9 @@ public class MainActivity extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        API api = retrofit.create(API.class);
+        API api = retrofit.create(API.class);   // Implementation of the Interface
 
-        Call<List<Post>> call = api.getPosts();
+        Call<List<Post>> call = api.getPosts(); // Making the call(HTTP request) on the Interface object
 
         call.enqueue(new Callback<List<Post>>() {
             @Override

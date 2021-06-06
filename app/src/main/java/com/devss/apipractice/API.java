@@ -7,6 +7,8 @@ import retrofit2.http.GET;
 
 public interface API {
 
-    @GET("posts")
-    Call<List<Post>> getPosts();
+    // Retrofit helps to turn the HTTP API to a JAVA Interface
+
+    @GET("posts")                        // Annotations are required to specify the type of request
+    Call<List<Post>> getPosts();         // Responsible for sending request and getting response
 }
